@@ -29,6 +29,9 @@ function App() {
     if (word.includes(value.toLowerCase()) && !guessed.includes(value)) {
       setGuessed((curr) => [...curr, value.toLowerCase()]);
     }
+    setTimeout(() => {
+      setGuess(() => '');
+    }, 1000);
   }
 
   const button = gameFinished
